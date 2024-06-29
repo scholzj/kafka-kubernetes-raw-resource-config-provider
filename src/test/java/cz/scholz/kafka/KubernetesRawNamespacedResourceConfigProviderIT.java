@@ -24,6 +24,7 @@ import java.util.Map;
 import java.util.Set;
 
 import static java.util.Collections.emptyMap;
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -105,6 +106,6 @@ public class KubernetesRawNamespacedResourceConfigProviderIT {
     @Test
     public void testWrongResource() {
         Exception e = assertThrows(ConfigException.class, () -> provider.get("v1/Service/" + namespace + "/i-do-not-exist-service", Set.of("$.spec.type")));
-        assertThat(e.getMessage(), is("Resource null/v1/Service with name i-do-not-exist-service was not found in namespace myproject!"));
+        assertThat(e.getMessage(), containsString("Resource null/v1/Service with name i-do-not-exist-service was not found in namespace"));
     }
 }

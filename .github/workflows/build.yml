@@ -43,7 +43,6 @@ jobs:
 
       - name: Publish to Sonatype
         run: |
-          cat $GITHUB_WORKSPACE/settings.xml
           echo $GPG_SIGNING_KEY | base64 -d > signing.gpg
           gpg --batch --import signing.gpg
           mvn -B -DskipTests -s $GITHUB_WORKSPACE/settings.xml -P ossrh deploy

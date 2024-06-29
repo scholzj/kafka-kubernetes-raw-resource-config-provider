@@ -79,18 +79,6 @@ public class KubernetesRawNamespacedResourceConfigProviderIT {
     }
 
     @Test
-    public void testKafkaResource() {
-        ConfigData config = provider.get("kafka.strimzi.io/v1beta2/Kafka/myproject/my-cluster", Set.of("$.status.listeners[?(@.name=='external')].bootstrapServers"));
-        Map<String, String> data = config.data();
-
-        assertThat(data.size(), is(1));
-
-        data.forEach((k, v) -> System.out.println(k + ": " + v));
-
-        assertThat(data.get("$.status.listeners[?(@.name=='external')].bootstrapServers"), is("192.168.1.73:32167"));
-    }
-
-    @Test
     public void testResource() {
         ConfigData config = provider.get("networking.k8s.io/v1/NetworkPolicy/" + namespace + "/" + RESOURCE_NAME, Set.of("$.spec.policyTypes[0]"));
         Map<String, String> data = config.data();

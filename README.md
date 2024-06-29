@@ -45,6 +45,19 @@ The configuration of the config provider consists of two parts:
    The JSON Path is executed against the Kubernetes resource using the [Jayway JsonPath](https://github.com/json-path/JsonPath).
    So it should follow all its rules.
 
+## Installation
+
+To use this config provider, you can use the JARs from the archive attached to one of the GitHub releases.
+Or you can download it as a Java dependency from Maven Central:
+
+```xml
+<dependency>
+    <groupId>cz.scholz</groupId>
+    <artifactId>kafka-kubernetes-raw-resource-config-provider</artifactId>
+    <version>0.1.0</version>
+</dependency>
+```
+
 ## Configuring the Kubernetes client
 
 The Kubernetes Config Provider is using the [Fabric8 Kubernetes Client](https://github.com/fabric8io/kubernetes-client).

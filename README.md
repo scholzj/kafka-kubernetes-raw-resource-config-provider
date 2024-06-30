@@ -6,13 +6,14 @@
 # Kubernetes Raw Resource Configuration Provider for Apache Kafka®
 
 [Apache Kafka®](https://kafka.apache.org) supports pluggable configuration providers which can load configuration data from external sources.
-This configuration provider allows you to read fields from any Kubernetes resource using a JSON Path quetry.
+This configuration provider allows you to read fields from any Kubernetes resource using a JSON Path query.
+
 
 _Note: If you want to load data from Secrets or Config Maps, you should also consider using the [Strimzi Kubernetes Config Provider](https://github.com/strimzi/kafka-kubernetes-config-provider)._
 
 ## Using the provider
 
-The provider consists from two classes - `KubernetesRawNamespacedResourceConfigProvider` and `KubernetesRawNonNamespacedResourceConfigProvider`.
+The provider consists of two classes: `KubernetesRawNamespacedResourceConfigProvider` and `KubernetesRawNonNamespacedResourceConfigProvider`.
 `KubernetesRawNamespacedResourceConfigProvider` is for getting information from namespace scoped resources.
 `KubernetesRawNonNamespacedResourceConfigProvider` is for getting information from cluster scoped resources.
 You can initialize them as any other Apache Kafka config provider:

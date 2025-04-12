@@ -21,9 +21,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: 'maven'
-          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
-          server-username: NEXUS_USERNAME
-          server-password: NEXUS_PASSWORD
+          server-id: central # Value of the distributionManagement/repository/id field of the pom.xml
+          server-username: CENTRAL_USERNAME
+          server-password: CENTRAL_PASSWORD
           settings-path: ${{ github.workspace }} # location for the settings.xml file
 
       # Setup Maven cache
@@ -50,7 +50,7 @@ jobs:
           gpg --delete-keys
           gpg --delete-secret-keys
         env:
-          NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
-          NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
+          CENTRAL_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
+          CENTRAL_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
           GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}

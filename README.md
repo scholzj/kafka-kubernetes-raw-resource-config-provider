@@ -1,5 +1,5 @@
 [![GitHub release](https://img.shields.io/github/release/scholzj/kafka-kubernetes-raw-resource-config-provider.svg)](https://github.com/scholzj/kafka-kubernetes-raw-resource-config-provider/releases/latest)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/cz.scholz/kafka-kubernetes-raw-resource-config-provider/badge.svg)](https://maven-badges.herokuapp.com/maven-central/cz.scholz/kafka-kubernetes-raw-resource-config-provider)
+[![Maven Central Version](https://img.shields.io/maven-central/v/cz.scholz/kafka-kubernetes-raw-resource-config-provider)](https://mvnrepository.com/artifact/cz.scholz/kafka-kubernetes-raw-resource-config-provider)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Twitter Follow](https://img.shields.io/twitter/follow/scholzj?style=social)](https://twitter.com/scholzj)
 
